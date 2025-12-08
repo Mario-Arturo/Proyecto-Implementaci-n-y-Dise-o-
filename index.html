@@ -1,22 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Página Web</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mario — Página Principal</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Bienvenidos a mi sitio web</h1>
-    </header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">Mario López</h1>
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false">☰</button>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html">Inicio</a>
+        <a href="bio.html">Biografía</a>
+        <a href="profesional.html">Información profesional</a>
+        <a href="intereses.html">Intereses</a>
+        <a href="habilidades.html">Habilidades</a>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <p>Esta es mi primera página creada como parte del proyecto de implementación y diseño web.</p>
-        <p>Aquí iré agregando contenido más adelante.</p>
-    </main>
+  <main class="container">
+    <section class="hero">
+      <h2>Hola — Soy Mario</h2>
+      <p>Bienvenido a mi sitio personal. Aquí encontrarás mi biografía, experiencia profesional, intereses y habilidades.</p>
+      <a class="cta" href="bio.html">Ver biografía</a>
+    </section>
 
-    <footer>
-        <p>© 2025 Mi Sitio Web</p>
-    </footer>
+    <section class="cards">
+      <article class="card">
+        <h3>Biografía</h3>
+        <p>Resumen rápido de quién soy y mis orígenes.</p>
+        <a href="bio.html">Leer más</a>
+      </article>
+
+      <article class="card">
+        <h3>Profesional</h3>
+        <p>Formación, experiencia y proyectos.</p>
+        <a href="profesional.html">Leer más</a>
+      </article>
+
+      <article class="card">
+        <h3>Intereses</h3>
+        <p>Aficiones, hobbies y metas personales.</p>
+        <a href="intereses.html">Leer más</a>
+      </article>
+
+      <article class="card">
+        <h3>Habilidades</h3>
+        <p>Lenguajes, herramientas y competencias.</p>
+        <a href="habilidades.html">Leer más</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Mario López — Sitio personal</p>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle simple para menú móvil
+    const btn = document.getElementById('menu-toggle');
+    const nav = document.getElementById('main-nav');
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
