@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Biografía — Mario</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">Mario López</h1>
+      <button id="menu-toggle-2" class="menu-toggle" aria-expanded="false">☰</button>
+      <nav class="main-nav" id="main-nav-2">
+        <a href="index.html">Inicio</a>
+        <a href="bio.html">Biografía</a>
+        <a href="profesional.html">Información profesional</a>
+        <a href="intereses.html">Intereses</a>
+        <a href="habilidades.html">Habilidades</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="content">
+      <h2>Biografía</h2>
+      <p>Escribe aquí tu biografía: origen, estudios, hitos importantes y datos que te definan.</p>
+      <h3>Formación</h3>
+      <ul>
+        <li>Licenciatura en ...</li>
+        <li>Curso / certificación en ...</li>
+      </ul>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>© 2025 Mario López</p></div>
+  </footer>
+
+  <script>
+    // Toggle para este menú también
+    const btn2 = document.getElementById('menu-toggle-2');
+    const nav2 = document.getElementById('main-nav-2');
+    btn2.addEventListener('click', () => {
+      const expanded = btn2.getAttribute('aria-expanded') === 'true';
+      btn2.setAttribute('aria-expanded', String(!expanded));
+      nav2.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
