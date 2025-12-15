@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intereses | Mario López</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">Mario López</h1>
+      <button id="menu-toggle" class="menu-toggle">☰</button>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html">Inicio</a>
+        <a href="bio.html">Biografía</a>
+        <a href="profesional.html">Información profesional</a>
+        <a href="intereses.html">Intereses</a>
+        <a href="habilidades.html">Habilidades</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="content">
+      <h2>Intereses personales</h2>
+      <ul>
+        <li>Tecnología y desarrollo web</li>
+        <li>Aprender nuevos lenguajes de programación</li>
+        <li>Videojuegos y análisis de sistemas</li>
+        <li>Mejorar habilidades profesionales</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Mario López</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menu-toggle');
+    const nav = document.getElementById('main-nav');
+    btn.onclick = () => nav.classList.toggle('open');
+  </script>
+</body>
+</html>
