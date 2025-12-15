@@ -57,6 +57,14 @@
       <h2 id="contador">0</h2>
       <button id="btnSumar">Haz clic</button>
     </section>
+    <script>
+      let contador = 0;
+      
+      document.getElementById("btnSumar").addEventListener("click", () => {
+        contador++;
+        document.getElementById("contador").textContent = contador;
+      });
+    </script>
   </main>
 
   <footer class="site-footer">
