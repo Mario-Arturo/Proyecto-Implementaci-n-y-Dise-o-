@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mario — Página Principal</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <h1 class="site-title">Mario López</h1>
+      <h1 class="site-title" data-aos="fade-down">
+        Mario López
+      </h1>
       <button id="menu-toggle" class="menu-toggle" aria-expanded="false">☰</button>
       <nav class="main-nav" id="main-nav">
         <a href="index.html">Inicio</a>
@@ -85,6 +88,10 @@
   </script>
   <script>
     console.log("¡Hola! Bienvenido a mi sitio web 😊");
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
   </script>
 </body>
 </html>
